@@ -21,7 +21,7 @@ function createWindow() {
         mainWindow.show()
     });
 
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 }
 
 app.on("ready", () => {

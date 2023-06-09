@@ -9,6 +9,9 @@ function FExit() {
 }
 
 function FSave() {
+    if(!fs.existsSync(SaveDir)) {
+        fs.mkdirSync(SaveDir);
+    }
     saveAutoClick();
     saveCatOne();
     saveCatTwo();
