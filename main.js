@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require("electron");
-const path = require("url");
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
@@ -22,7 +21,7 @@ function createWindow() {
         mainWindow.show()
     });
 
-    // mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 }
 
 app.on("ready", () => {

@@ -14,11 +14,12 @@ const BuyCat1 = document.getElementById("BuyCat1");
 
 global.MainCounter = 0;
 global.plusOneClick = 1;
-global.CostFirstUp = 100;
+global.CostFirstUp = 50;
 global.CostSecondUp = 500;
 global.PlusAutoClick = 0;
 global.BuyCat2 = false;
 global.BuyCat3 = false;
+global.SaveDir = "./save/";
 
 CatClick.addEventListener("click", FCatClick);
 function FCatClick() {
@@ -103,53 +104,50 @@ function FFirstCat() {
 }
 
 const fs = require("fs");
-fs.readFile("save.txt", function (error, data) {
-    MainCounter = Number(data)
-    if (error) {
-        MainCounter = 1;
+fs.readFile(SaveDir + "save.txt", function (error, data) {
+    if (!error) {
+        MainCounter = Number(data);
     }
 });
-fs.readFile("saveCostFirstUp.txt", function (error, data) {
-    CostFirstUp = Number(data)
-    if (error) {
-        CostFirstUp = 100;
+fs.readFile(SaveDir + "saveCostFirstUp.txt", function (error, data) {
+    if (!error) {
+        CostFirstUp = Number(data);
     }
-    costingFirstUpdate.textContent = CostFirstUp;
+    costingFirstUpdate.innerText = CostFirstUp;
 });
-fs.readFile("saveOneClick.txt", function (error, data) {
-    plusOneClick = Number(data)
-    if (error) {
-        plusOneClick = 1;
+fs.readFile(SaveDir + "saveOneClick.txt", function (error, data) {
+    if (!error) {
+        plusOneClick = Number(data);
     }
-    ForOneClick.textContent = plusOneClick;
+    ForOneClick.innerText = plusOneClick;
 });
-fs.readFile("saveAutoClick.txt", function (error, data) {
-    PlusAutoClick = Number(data)
-    if (error) {
-        PlusAutoClick = 0;
+fs.readFile(SaveDir + "saveAutoClick.txt", function (error, data) {
+    if (!error) {
+        PlusAutoClick = Number(data);
     }
-    forOneSecondClick.textContent = PlusAutoClick;
+    forOneSecondClick.innerText = PlusAutoClick;
 });
-fs.readFile("saveCostSecondUp.txt", function (error, data) {
-    CostSecondUp = Number(data)
-    if (error) {
-        CostSecondUp = 500;
+fs.readFile(SaveDir + "saveCostSecondUp.txt", function (error, data) {
+    if (!error) {
+        CostSecondUp = Number(data);
     }
-    SecondUpdateCosting.textContent = CostSecondUp;
+    SecondUpdateCosting.innerText = CostSecondUp;
 });
-fs.readFile("saveCatOne.txt", function (error, data) {
+fs.readFile(SaveDir + "saveCatOne.txt", function (error, data) {
+    if(error) return;
     BuyCat2 = data.toString()
     if (BuyCat2 === true) {
-        Price2Cat.textContent = "Bought"
+        Price2Cat.innerText = "Bought"
     }
     if (error) {
         BuyCat2 = false;
     }
 });
-fs.readFile("saveCatTwo.txt", function (error, data) {
+fs.readFile(SaveDir + "saveCatTwo.txt", function (error, data) {
+    if(error) return;
     BuyCat3 = data.toString()
     if (BuyCat3 === true) {
-        Price3Cat.textContent = "Bought"
+        Price3Cat.innerText = "Bought"
     }
     if (error) {
         BuyCat3 = false;
