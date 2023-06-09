@@ -1,0 +1,138 @@
+p{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+*{
+
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(232, 187, 240), rgb(224, 153, 236) 30%, rgb(193, 21, 97));;
+
+}
+
+#cat {
+    width: 300px;
+    height: 300px;
+    margin-left: -40px;
+}
+
+.Logo{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 205px;
+    left: 370px;
+}
+
+#counter{
+color: blue;
+    font-size: 40px;
+
+}
+
+.updaters {
+float: right;
+    margin-right: -7.6px;
+    margin-top: -7.1px;
+    width: 500px;
+    height: 899px;
+    background: linear-gradient(180deg, rgb(53, 76, 247), rgb(192, 52, 216) 54%, rgb(36, 110, 231));;
+}
+
+.updaters .update {
+
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 1px solid purple;
+    width: 400px;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(224, 153, 236) 30%, rgb(232, 187, 240), rgb(224, 153, 236) 30%);;
+}
+
+#counter{
+    display: flex;
+    text-align: center;
+    width: 185px;
+    height: 75px;
+    border-radius: 15px ;
+    padding-left: 110px;
+
+}
+.container{
+    position: fixed;
+    margin-top: 200px;
+    margin-left: 300px;
+
+}
+
+.NewCat1{
+    background: linear-gradient(90deg, rgb(224, 153, 236) 30%, rgb(232, 187, 240), rgb(224, 153, 236) 30%);;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 175px;
+    margin-top: 250px;
+}
+
+.NewCat2{
+    background: linear-gradient(90deg, rgb(224, 153, 236) 30%, rgb(232, 187, 240), rgb(224, 153, 236) 30%);;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: -150px;
+}
+.NewCat2:nth-last-child(1){
+    background: linear-gradient(90deg, rgb(224, 153, 236) 30%, rgb(232, 187, 240), rgb(224, 153, 236) 30%);;
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*border-radius: 15px;*/
+    /*text-align: center;*/
+    margin-left: 345px;
+    margin-top: -150px;
+}
+
+.exit-btn{
+    position: fixed;
+    background: blue;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 700px;
+    color: fuchsia;
+}
+
+#fullscreen{
+    position: fixed;
+    background: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 500px;
+    color: fuchsia;
+    font-size: 15px;
+}
+
+.music-btn{
+    position: fixed;
+    padding: auto;
+    width: 5%;
+}
+
+.NewCat1 p {
+
+}
+
+.NewCatImg{
+    width: 75px;
+    height: 75px;
+}
